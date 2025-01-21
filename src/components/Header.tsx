@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <>
-      {/* Mobile menu */}
+      {/* Hidden mobile menu */}
       <div className={`fixed inset-0 z-30 bg-glass backdrop-blur-xl duration-300 p-3 pt-20 ${showMenu ? "" : "opacity-0 pointer-events-none"} sm:hidden`}>
         <div className="w-full h-full flex flex-col items-start justify-between">
           <div className="w-full">
@@ -116,7 +116,7 @@ export default function Header() {
       ) : (
         // Unauthenticated header
         <div className="fixed top-0 right-0 w-full flex flex-col justify-center items-center p-2 z-40 gap-3">
-          <div className="flex flex-row justify-between items-center w-full sm:w-[400px] py-3 px-4 bg-glass rounded-lg">
+          <div className="flex flex-row justify-between items-center w-full py-3 px-4 bg-glass backdrop-blur-xl rounded-lg">
             <Link className="flex flex-row items-center gap-3 text-lg" to="/">
               <GoGlobe className="text-2xl" />
               Audio Spheres

@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../utils/AuthContext";
 import { MdAdd } from "react-icons/md";
 import { GoGlobe } from "react-icons/go";
-import Arcs from "../components/Arcs";
 
 export default function Home() {
   const { login, isAuthenticated } = useAuth();
@@ -20,14 +19,19 @@ export default function Home() {
           </div>
         </div>
       ) : (
-        <div className="absolute inset-0 flex flex-col justify-center items-center gap-10 p-5">
-          <h1 className="max-w-[700px] text-center text-4xl sm:text-5xl md:text-6xl">
-            Discover music and explore your taste like never before.
-          </h1>
-          <button className="button text-lg" onClick={login}>
-            Start exploring
-          </button>
-          <Arcs />
+        <div className="absolute inset-0 flex flex-col justify-start items-center p-5 md:px-20">
+          <div className="w-full max-w-[1600px] flex flex-col justify-start items-start gap-10 pt-[20vh] pb-20">
+            <h1 className="max-w-[14em] text-6xl sm:7xl sm:text-[max(4vw, 5rem)]">
+              Discover music and explore your taste like never before.
+            </h1>
+            <p className="max-w-[32em] text-2xl">Explore your music taste with a unique tree interface. Start with a favorite track and watch as branches unfold, leading you on a personalized journey of discovery.</p>
+            <button className="button text-xl px-6 py-3" onClick={login}>
+              Start exploring
+            </button>
+            <div className="w-full mt-10 bg-light backdrop-blur-xl p-2 rounded-lg">
+              <video className="w-full rounded" src="/videos/demo.mp4" preload="auto" autoPlay loop playsInline muted />
+            </div>
+          </div>
         </div>
       )}
     </div>
