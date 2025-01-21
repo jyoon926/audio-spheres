@@ -21,7 +21,7 @@ export default function Home() {
       ) : (
         <div className="absolute inset-0 flex flex-col justify-start items-center p-5 md:px-20">
           <div className="w-full max-w-[1600px] flex flex-col justify-start items-start gap-10 pt-[20vh] pb-20">
-            <h1 className="max-w-[14em] text-6xl sm:7xl sm:text-[max(4vw, 5rem)]">
+            <h1 className="max-w-[14em] text-6xl sm:7xl sm:text-[5rem]">
               Discover music and explore your taste like never before.
             </h1>
             <p className="max-w-[32em] text-2xl">Explore your music taste with a unique tree interface. Start with a favorite track and watch as branches unfold, leading you on a personalized journey of discovery.</p>
@@ -29,7 +29,7 @@ export default function Home() {
               Start exploring
             </button>
             <div className="w-full mt-10 bg-light backdrop-blur-xl p-2 rounded-lg">
-              <video className="w-full rounded" src="/videos/demo.mp4" preload="auto" autoPlay loop playsInline muted />
+              <video className="w-full rounded bg-glass" src="/videos/demo.mp4" preload="auto" autoPlay loop playsInline muted />
             </div>
           </div>
         </div>
