@@ -6,6 +6,7 @@ export default {
       colors: {
         background: "rgb(var(--background))",
         foreground: "rgb(var(--foreground))",
+        dark: "rgba(var(--background), 0.25)",
         light: "rgba(var(--foreground), 0.25)",
         lighter: "rgba(var(--foreground), 0.15)",
         lightest: "rgba(var(--foreground), 0.1)",

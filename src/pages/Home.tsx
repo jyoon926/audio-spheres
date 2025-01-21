@@ -28,8 +28,12 @@ export default function Home() {
             <button className="button text-xl px-6 py-3" onClick={login}>
               Start exploring
             </button>
-            <div className="w-full mt-10 bg-light backdrop-blur-xl p-2 rounded-lg">
-              <video className="w-full rounded bg-glass" src="/videos/demo.mp4" preload="auto" autoPlay loop playsInline muted />
+            <div className="w-full mt-10 bg-light backdrop-blur-xl p-2 rounded-lg aspect-video">
+              <video className="w-full rounded" src="/videos/demo.mp4" preload="auto" autoPlay loop playsInline muted />
+              <div className="absolute w-full rounded aspect-video flex flex-col gap-4 justify-center items-center">
+                <p className="text-xl opacity-50">Loading video</p>
+                <div className="spinner lg"></div>
+              </div>
             </div>
           </div>
         </div>
