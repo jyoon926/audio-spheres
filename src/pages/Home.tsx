@@ -2,9 +2,16 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../utils/AuthContext";
 import { MdAdd } from "react-icons/md";
 import { GoGlobe } from "react-icons/go";
+import { useRef, useEffect } from "react";
 
 export default function Home() {
   const { login, isAuthenticated } = useAuth();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current)
+      videoRef.current.defaultMuted = true;
+  })
 
   return (
     <div>
@@ -29,7 +36,9 @@ export default function Home() {
               Start exploring
             </button>
             <div className="w-full mt-10 bg-light backdrop-blur-xl p-2 rounded-lg aspect-video flex">
-              <video className="w-full rounded z-10" src="/videos/demo.mp4" preload="auto" autoPlay loop playsInline muted />
+              <video className="w-full rounded z-10" preload="auto" autoPlay loop playsInline muted ref={videoRef}>
+                <source src="/videos/demo.mp4" type="video/mp4" />
+              </video>
               <div className="absolute w-full rounded aspect-video flex flex-col gap-4 justify-center items-center">
                 <p className="text-xl opacity-50">Loading video</p>
                 <div className="spinner lg"></div>
